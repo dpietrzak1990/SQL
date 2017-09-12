@@ -93,14 +93,46 @@ VALUES
  #imię i nazwisko osoby zamawiającej, id zamówienia ,datę, status zamówienia, 
  #tytuł zamówionej książki.
  
- SELECT c.CustomerName, c.CustomerSurname, o.Id, o.OrderDate, o.Status, b.Title
- FROM Customers AS c, Orders AS o, Books AS b
- WHERE c.CustomerSurname= "Rutkowski" AND
- c.IdCustomer = o.IdCustomer AND
- o.IdBook = b.IdBook
- ORDER BY
- o.OrderDate ASC;
+ #SELECT c.CustomerName, c.CustomerSurname, o.Id, o.OrderDate, o.Status, b.Title
+ #FROM Customers AS c, Orders AS o, Books AS b
+ #WHERE c.CustomerSurname= "Rutkowski" AND
+ #c.IdCustomer = o.IdCustomer AND
+ #o.IdBook = b.IdBook
+ #ORDER BY
+ #o.OrderDate ASC;
  
+ 
+ USE Bookstore;
+ 
+ #UPDATE Customers SET CustomerSurname="Psikuta" WHERE IdCustomer=4;
+ #SELECT * FROM Customers WHERE IdCustomer=4;
+ 
+ #UPDATE Customers SET IdCustomer=1 WHERE IdCustomer=3;
+ 
+ 
+ #UPDATE Books SET Price=ROUND(Price*1.1,2);
+ 
+ #UPDATE Books SET Price=Price-10 ORDER BY Price DESC LIMIT 1;
+ 
+ #SELECT* FROM Customers;
+ 
+ #SELECT * FROM Books WHERE Price = (SELECT MAX(Price) FROM Books);
+ 
+ #UPDATE Customers SET CustomerName="Joanna", CustomerSurname="Dostojewska" WHERE IdCustomer=10;
+ 
+ #UPDATE Orders SET status="wysłano" WHERE IdOrders=4 OR IdOrders=5;
+ 
+ #INSERT INTO Customers(IdCustomer, CustomerName, CustomerSurname, town)
+ #VALUES
+ #(NULL, "Franciszek", "Janowski","Chorzów");
+ 
+ #SELECT * FROM Customer;
+ #INSERT INTO orders(IdCustomer, OrderDate, Status)
+ #VALUES
+ #(7,3, "2017-09-11", "oczekiwane")
+ 
+ #INSERT INTO Books(AuthorSurname, Title)
+ #VALUES("Grębosz", "Symfonia C++")
  
  
  
