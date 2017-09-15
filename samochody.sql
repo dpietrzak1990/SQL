@@ -14,7 +14,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 CREATE TABLE IF NOT EXISTS `auta` (
   `idauta` int(11) NOT NULL AUTO_INCREMENT,
-  `marka` text CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
+  `marka` text CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,books
   `model` text CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
   `przebieg` int(11) NOT NULL,
   `rocznik` int(11) NOT NULL,
